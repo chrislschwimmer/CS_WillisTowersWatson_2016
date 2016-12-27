@@ -1,6 +1,4 @@
 # CS_WillisTowersWatson_2016
-Simple IoC Demo Project
-
 sources used
 
 https://app.pluralsight.com/library/courses/ioc-aspdotnet-mvc4/table-of-contents
