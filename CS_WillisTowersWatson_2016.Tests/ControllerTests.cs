@@ -37,5 +37,20 @@ namespace CS_WillisTowersWatson_2016.Tests
             Assert.NotEqual("!sent Mock message: test message", controller.ViewBag.Message);
             Assert.NotEqual("!using Mock data", controller.ViewBag.Data);
         }
+
+        [Fact]
+        public void TestMockServices4()
+        {
+            var container = new Container();
+            container.Register<HomeController, HomeController>();
+            container.Register<IMessageService, MockMessageSerivce>();
+            container.Register<IDataSerivce, MockDataService>();
+
+            var controller = container.Resolve<HomeController>();
+            var results = controller.Index();
+
+            Assert.NotEqual("!sent Mock message: test message", controller.ViewBag.Message);
+            Assert.NotEqual("!using Mock data", controller.ViewBag.Data);
+        }
     }
 }
