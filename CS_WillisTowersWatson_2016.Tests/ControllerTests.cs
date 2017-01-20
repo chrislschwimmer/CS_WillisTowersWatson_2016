@@ -39,7 +39,7 @@ namespace CS_WillisTowersWatson_2016.Tests
         }
 
         [Fact]
-        public void TestMockServices4()
+        public void TestMockServices3()
         {
             var container = new Container();
             container.Register<HomeController, HomeController>();
